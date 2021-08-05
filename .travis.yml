@@ -1,11 +1,14 @@
 language: node_js
 
+node_js:
+  - 7
+
 sudo: required
 services: 
   - docker
 
 before_install:
-  - docker build -t surajdockerdemo/docker-node -f Dockerfile .
+  - docker build -t surajdockerdemo/docker-node .
 
 script:
   - docker run surajdockerdemo/docker-node
