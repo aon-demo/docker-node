@@ -8,7 +8,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t surajdockerdemo/docker-node .
+  - docker build -f Dockerfile.dev -t surajdockerdemo/docker-node .
 
 script:
   - docker run surajdockerdemo/docker-node
